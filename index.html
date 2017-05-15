@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ayrus-Compiler</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<!-- logo -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="#" class="navbar-brand">AYRUS<span style="font-size:10px;">&nbspThe compiler</span></a>
+			</div>
+			<!-- list items -->
+			<div class="collapse navbar-collapse" id="mainNavBar">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">HTML</a></li>  <!-- active class shows that currently working section -->
+					<li><a href="#">C++/C</a></li>
+					<li><a href="#">Python</a></li>
+					<li><a href="#">Java</a></li>
+					<li><a href="#">About</a></li>
+				</ul>
+			</div>		
+		</div>	
+	</nav>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6">
+				<h4>Start writing you HTML,CSS,JavaScript here:</h4>
+				<textarea  rows="25" id="editor" style="width:100%;resize: none;background-color: #f0f0f0" spellcheck="false"></textarea>
+				<button class="btn btn-info" type="button" onclick="myfun()" >Run</button>
+			</div>
+			<div class="col-md-6">
+				<h4>Output:</h4>
+				<iframe height="510px" width="100%" srcdoc='' id="comp"></iframe>
+			</div>
+		</div>
+	</div>
+
+
+
+<script>
+	function myfun(){
+		var code = document.getElementById("editor").value;
+		document.getElementById("comp").srcdoc = code;
+	}
+</script>
+	
+</body>
+</html>
